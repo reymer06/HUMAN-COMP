@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Orbitron", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        120deg,
+        #322ca7,
+        #9771a7,
+        #2f6183,
+        #443bf5
+    );
+
+    background-size: 300% 300%;
+    animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.register {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 20px;
+}
+
+.register-glass {
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    text-align: center;
+    background: rgba(15, 12, 45, 0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    box-shadow: 0 0 35px rgba(133, 65, 255, 0.2);
+}
+
+.subtitle {
+    color: #ded9f5;
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 800;
+}
+
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+
+    font-family: "Rajdhani", sans-serif;
+    font-size: 16px;
+    color: white;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.input-group input::placeholder {
+    color: #c3bddb;
+}
+
+.input-group input:focus {
+    border-color: #c084fc;
+    box-shadow: 0 0 12px rgba(192, 132, 252, 0.35);
+}
+
+
+.register-button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 8px;
+
+    font-family: "Oxanium", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+
+    background: linear-gradient(90deg, #7138e8, #a855f7);
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+
+.login-text {
+    margin-top: 22px;
+    font-size: 16px;
+}
+
+.login-text a {
+    color: #d8b4fe;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/*sickersss*/
+
+floating-stickers {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+.sticker {
+    position: absolute;
+    display: block;
+    font-size: 38px;
+    opacity: 0.8;
+
+    filter: drop-shadow(0 0 12px rgba(192, 132, 252, 0.7));
+
+    animation: floatAround 3s ease-in-out infinite;
+}
+
+.sticker-1 { animation-duration: 7s; }
+.sticker-2 { animation-duration: 10s; }
+.sticker-3 { animation-duration: 8s; }
+.sticker-4 { animation-duration: 12s; }
+.sticker-5 { animation-duration: 9s; }
+.sticker-6 { animation-duration: 6s; }
+.sticker-7 { animation-duration: 11s; }
+.sticker-8 { animation-duration: 9s; }
+
+/* position ng stickers */
+
+.sticker-8 {
+    top: 12%;
+    left: 12%;
+    animation-delay: 0s;
+}
+
+.sticker-3 {
+    top: 20%;
+    right: 15%;
+    animation-delay: 0.7s;
+}
+
+.sticker-6 {
+    bottom: 18%;
+    left: 10%;
+    animation-delay: 1.2s;
+}
+
+.sticker-7 {
+    top: 45%;
+    left: 5%;
+    animation-delay: 0.4s;
+}
+
+.sticker-1 {
+    bottom: 12%;
+    right: 15%;
+    animation-delay: 1.5s;
+}
+
+.sticker-4 {
+    top: 10%;
+    right: 38%;
+    animation-delay: 0.9s;
+}
+
+.sticker-5 {
+    bottom: 30%;
+    right: 7%;
+    animation-delay: 1.8s;
+}
+
+.sticker-2 {
+    top: 45%;
+    right: 10%;
+    animation-delay: 0.5s;
+}
+
+@keyframes floatAround {
+    0%, 100% {
+        transform: translateY(0) rotate(-8deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(8deg);
+    }
+}
